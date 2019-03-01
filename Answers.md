@@ -24,4 +24,4 @@
 
 1.  Mention three tools we can use to make AJAX requests
 
->Fetch, Axios, and
+>Fetch, Axios, and Http
