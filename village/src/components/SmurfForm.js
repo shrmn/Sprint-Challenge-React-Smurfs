@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class SmurfForm extends Component {
   constructor(props) {
@@ -12,7 +13,6 @@ class SmurfForm extends Component {
 
   addSmurf = event => {
     event.preventDefault();
-    console.log(this.state);
     this.props.addSmurf(this.state);
     this.setState({
       name: '',
@@ -49,6 +49,7 @@ class SmurfForm extends Component {
           />
           <button type="submit">Add to the village</button>
         </form>
+        <Link to='/'>Smurf List</Link>
       </div>
     );
   }
