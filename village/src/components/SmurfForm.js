@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 class SmurfForm extends Component {
   constructor(props) {
@@ -20,7 +21,7 @@ class SmurfForm extends Component {
       height: ''
     });
     this.props.history.push('/');
-}
+  }
 
   handleInputChange = e => {
     this.setState({ [e.target.name]: e.target.value });

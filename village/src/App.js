@@ -41,6 +41,14 @@ class App extends Component {
       .catch(err => this.setState({ error: err }));
   }
 
+  deleteSmurf = (e, id) => {
+    e.preventDefault();
+    axios
+      .delete(`http://localhost:3333/smurfs/${id}`)
+      .then(res => this.setState({ smurfs: res.data }))
+      .catch(err => this.setState({ error: err }));
+  }
+
   render() {
     return (
       <div className="App">
@@ -59,6 +67,7 @@ class App extends Component {
           render={props => (
             <Smurfs
               {...props}
+              deleteSmurf={this.deleteSmurf}
               smurfs={this.state.smurfs}
             />
           )}
